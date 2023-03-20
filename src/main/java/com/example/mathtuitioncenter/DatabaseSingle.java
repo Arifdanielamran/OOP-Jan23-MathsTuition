@@ -14,9 +14,10 @@ public class DatabaseSingle {
     private Connection con;
 
     public DatabaseSingle(String url, String port, String db,
-                    String username, String passwd) {
+                    String username, String passwd) //this is constructor for Databasesingle class
+    {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver"); // load jdbc driver using TRY AND CATCH METHOD 
         }
         catch(Exception e){ System.out.println(e);}
 
@@ -55,6 +56,5 @@ public class DatabaseSingle {
     public static void display() {
         System.out.println("You are in DatabaseSingle class");
     }
-
 
 }
